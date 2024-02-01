@@ -1,10 +1,19 @@
 .search__input.field__input {
-  padding-right: 9.8rem;
+  /* padding-right: 9.8rem; */
+  height: 32px;
 }
 
 .search__button {
   right: var(--inputs-border-width);
   top: var(--inputs-border-width);
+  background-color: #F5F6F4;
+}
+.input::placeholder {
+  color: #004289;
+  font-size: 14px;
+  font-weight: 400;
+  left: 10px;
+  top: 4.29px;
 }
 
 .reset__button {

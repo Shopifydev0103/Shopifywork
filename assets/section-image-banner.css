@@ -352,7 +352,7 @@
 @media screen and (min-width: 750px) {
   .banner--desktop-transparent .banner__box {
     background: transparent;
-    max-width: 89rem;
+    max-width: 68rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -360,6 +360,9 @@
 
   .banner--desktop-transparent .button--secondary {
     --alpha-button-background: 0;
+    color: #004289;
+    text-transform: uppercase;
+    padding: 16px 32px;
   }
 
   .banner--desktop-transparent .content-container:after {
@@ -387,7 +390,10 @@
 }
 
 .banner__box > * + .banner__text {
-  margin-top: 1.5rem;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 400;
+  /* text-transform: capitalize; */
 }
 
 @media screen and (min-width: 750px) {
@@ -425,7 +431,15 @@
 }
 
 .banner__heading {
-  margin-bottom: 0;
+  font-size: 110px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.banner__subheading {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .banner__box .banner__heading + * {
@@ -438,6 +452,11 @@
   gap: 1rem;
   max-width: 45rem;
   word-break: break-word;
+  font-size: 14px;
+  color: #004289;
+  
+  font-weight: 700;
+  background-color: white;
 }
 
 @media screen and (max-width: 749px) {
