@@ -3171,6 +3171,7 @@ details-disclosure > details {
   }
 }
 
+
 .rte img {
   height: auto;
   max-width: 100%;
@@ -3214,6 +3215,7 @@ details-disclosure > details {
 .rte blockquote > * {
   margin: -0.5rem 0 -0.5rem 0;
 }
+
 
 /* Image mask global styles */
 

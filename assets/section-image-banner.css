@@ -348,6 +348,12 @@
   word-wrap: break-word;
   z-index: 1;
 }
+.btn__box {
+  color: #004289;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 16px 32px;
+}
 
 @media screen and (min-width: 750px) {
   .banner--desktop-transparent .banner__box {
@@ -360,9 +366,7 @@
 
   .banner--desktop-transparent .button--secondary {
     --alpha-button-background: 0;
-    color: #004289;
-    text-transform: uppercase;
-    padding: 16px 32px;
+    
   }
 
   .banner--desktop-transparent .content-container:after {
@@ -436,6 +440,30 @@
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+@media (max-width: 425px) {
+  .banner__heading  {
+    font-size: 60px;
+  }
+  .btn__box {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+  .banner__box>*+.banner__text {
+    font-size: 16px;
+  }
+  .banner__subheading {
+    font-size: 13PX;
+  }
+@media (min-width: 320px) {
+    .banner__heading {
+      font-size: 40px;
+    }
+    .banner__box>*+.banner__text {
+      font-size: 13px;
+      
+    }
+}
+}
 .banner__subheading {
   font-size: 15px;
   font-weight: 700;
@@ -451,8 +479,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   max-width: 45rem;
-  word-break: break-word;
-  font-size: 14px;
+  word-break: break-word;  
   color: #004289;
   
   font-weight: 700;
