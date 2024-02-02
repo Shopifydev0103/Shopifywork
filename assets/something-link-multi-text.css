@@ -1,0 +1,77 @@
+.something-link .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px 0;
+}
+.something-link .main-wrapper + p {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+.something-link .main-wrapper h1 {
+    font-size: 66px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+.something-link .main-wrapper a {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #004289;
+    padding: 19px 91px;
+    color: #004289;
+    text-transform: uppercase;
+}
+.something-link .main-wrapper .blocks {
+    display: flex;
+    align-items: stretch;
+}
+.something-link .main-wrapper .blocks .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+}
+.something-link .main-wrapper .blocks .container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+.something-link .main-wrapper .blocks .container p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 1215px) {
+    .something-link .main-wrapper .blocks .container h2 {
+        font-size: 15px;
+    }
+    .something-link .main-wrapper .blocks .container p {
+        font-size: 8px;
+    }
+    .something-link .main-wrapper h1 {
+        font-size: 30px;
+    }
+    .something-link .main-wrapper a {
+        font-size: 7px;
+        padding: 10px 45px;
+    }
+}
+
+@media (max-width: 425px) {
+    .something-link .main-wrapper .blocks {
+        display: grid;
+        grid: 200px / auto auto;
+    }
+    .something-link .main-wrapper .blocks .container h2 {
+        font-size: 10px;
+    }
+    .something-link .main-wrapper h1 {
+        font-size: 15px;
+    }
+}

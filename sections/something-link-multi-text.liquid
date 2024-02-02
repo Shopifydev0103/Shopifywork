@@ -1,0 +1,84 @@
+{{ 'something-link-multi-text.css' | asset_url | stylesheet_tag }}
+
+<div class="something-link">
+    <div class="main-wrapper">
+        <p>{{ section.settings.sub_header }}</p>
+        <h1>{{ section.settings.header }}</h1>
+        <div class="blocks">
+            {%- for block in section.blocks -%}
+                <div class="container">
+                    <div>
+                        <img src="{{ block.settings.icon | img_url: medium }}">
+                    </div>
+                    {%- if block.settings.block_header -%}
+                        <h2>{{ block.settings.block_header }}</h2>
+                    {%- endif -%}
+                    {%- if block.settings.block_content -%}
+                        <p>{{ block.settings.block_content }}</p>
+                    {%- endif -%}
+                </div>
+            {%- endfor -%}
+        </div>
+        {%- if section.settings.button_label -%}
+            <a class="something-button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        {%- endif -%}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "something link",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "sub_header",
+                "label": "subHeader"
+            },
+            {
+                "type": "text",
+                "id": "header",
+                "label": "Header"
+            },
+            {
+                "type": "text",
+                "id": "button_label",
+                "label": "Button Label"
+            },
+            {
+                "type": "url",
+                "id": "button_link",
+                "label": "Button Link"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "multi text",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_header",
+                        "label": "Block Title"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_content",
+                        "label": "Block content"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "somethng link"
+            }
+        ]
+        
+    }
+{% endschema %}
