@@ -1,0 +1,137 @@
+{{ 'section-image-with-text-blocks.css' | asset_url | stylesheet_tag }}
+
+
+<div class="image-with-text-blocks">
+  <div class="left-block">
+    {%- for block in section.blocks -%}
+        {%- if block.type == 'block1' -%}
+            <div class="image-with-text-blocks__item">
+                <div class="media-wrapper">
+                    <img src="{{ block.settings.img | image_url: medium }}" >
+                </div>
+                <div class="text-wrapper" style= "background-color: {{block.settings.bg_color }}">
+                    <div class="container">
+                        {%- if block.settings.title -%}
+                            <h2 class="title">{{ block.settings.title}}</h2>
+                        {%- endif -%}
+                        {% if block.settings.text %}
+                            <p class="text">{{ block.settings.text }}</p>
+                        {% endif %}
+                        {% if block.settings.button_label %}
+                            <a class="btn" href="{{ block.settings.button_link}}">{{ block.settings.button_label }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="right-block">
+    {%- for block in section.blocks -%}
+        {%- if block.type == 'block2' -%}
+            <div class="image-with-banner">
+                <div class="background-image">
+                    <img src="{{ block.settings.img | image_url: medium }}">
+                </div>
+                <div class="container">
+                    {% if block.settings.title %}
+                        <h1 class="title">{{ block.settings.title }}</h1>
+                    {% endif %}
+                    {%- if block.settings.text -%}
+                        <p class="text">{{ block.settings.text }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.button_label -%}
+                        <a class="btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+                    {%- endif -%}
+                </div>
+            </div>
+        {% endif %}
+    {%- endfor -%}
+    
+</div>
+
+</div>
+
+{% schema %}
+{
+  "name": "img with text blocks",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "block1",
+      "name": "image with text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background color"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Text"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "block2",
+      "name": "image banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Text"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text blocks"
+    }
+  ]
+}
+{% endschema %}

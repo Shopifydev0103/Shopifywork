@@ -1,0 +1,183 @@
+.image-with-text-blocks {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.left-block {
+    width: 50%;
+}
+.image-with-text-blocks__item {
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+    
+}
+.image-with-text-blocks__item .media-wrapper {
+    width: 50%;
+    
+}
+.image-with-text-blocks__item .media-wrapper img {
+    width: 100%;
+    height: 100%;
+    
+}
+.image-with-text-blocks__item .text-wrapper {
+    width: 50%;
+}
+.image-with-text-blocks__item .text-wrapper .container {
+    width: 70%;
+    margin: auto;
+}
+.image-with-text-blocks__item .text-wrapper .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+.image-with-text-blocks__item .text-wrapper .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.image-with-text-blocks .text-wrapper .btn {
+    font-size: 14px;
+    font-weight: 400;
+    border: 2px solid white;
+    padding: 16px 32px;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+.right-block {
+    width: 50%;
+}
+.right-block .image-with-banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 20px;
+}
+.background-image {
+    width: 100%;
+    height: 100%;
+}
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right-block .image-with-banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.right-block .image-with-banner .container .title {
+    font-size: 60px;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+}
+.right-block .image-with-banner .container .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+    text-align: center;
+}
+.right-block .image-with-banner .container .btn {
+    font-size: 14px;
+    font-weight: 400;
+    border: 2px solid white;
+    padding: 16px 32px;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 425px) {
+    .image-with-text-blocks {
+        flex-direction: column;
+    }
+    .left-block {
+        width: 100%;
+    }
+    .right-block {
+        width: 100%;
+    }
+    .right-block .image-with-banner {
+        padding-top: 0;
+    }
+    .image-with-text-blocks__item {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .image-with-text-blocks__item .text-wrapper {
+        background-color: transparent !important; 
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .image-with-text-blocks__item .media-wrapper {
+        width: 100%;
+    }
+    .image-with-text-blocks__item .text-wrapper .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .image-with-text-blocks__item .text-wrapper .title {
+        font-size: 18px;
+    }
+    .image-with-text-blocks__item .text-wrapper .text {
+        font-size: 12px;
+    }
+    .image-with-text-blocks .text-wrapper .btn {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+    .right-block .image-with-banner .container .title {
+        font-size: 30px;
+    }
+    .right-block .image-with-banner .container .text {
+        font-size: 12px;
+    }
+    .right-block .image-with-banner .container .btn {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+}
+@media (max-width:1024px) {
+    .image-with-text-blocks__item .text-wrapper .title {
+        font-size: 20px;
+        margin-top: 35px;
+    }
+    .image-with-text-blocks__item .text-wrapper .text {
+        font-size: 14px;
+    }
+    .image-with-text-blocks .text-wrapper .btn {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+    .right-block .image-with-banner .container .title {
+        font-size: 34px;
+        margin-top: -15px;
+    }
+    .right-block .image-with-banner .container .text {
+        font-size: 11px;
+    }
+    .right-block .image-with-banner .container .btn {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+}

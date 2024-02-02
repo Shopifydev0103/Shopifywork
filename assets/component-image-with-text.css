@@ -349,6 +349,30 @@
 .image-with-text__text--caption:first-child {
   margin-top: 0;
 }
+.title-style {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+.bg-color {
+  background-color: #0468DB;
+  ;
+}
+.text-style {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.btn-style {
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  color: white;
+}
 
 .image-with-text__content :last-child:is(.image-with-text__heading),
 .image-with-text__text--caption {
