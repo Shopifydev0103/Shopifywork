@@ -3,17 +3,30 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "subheading_kFTNxK": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "on an adventure"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "outdoors",
             "heading_size": "h0"
+          }
+        },
+        "text_nGdYMF": {
+          "type": "text",
+          "settings": {
+            "text": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "shop outdoors",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -23,10 +36,13 @@
         }
       },
       "block_order": [
+        "subheading_kFTNxK",
         "heading",
+        "text_nGdYMF",
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/train.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -37,6 +53,84 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "text_deliver_mYtdJG": {
+      "type": "text-deliver",
+      "blocks": {
+        "text_7DrE3A": {
+          "type": "text",
+          "settings": {
+            "deliver_icon": "shopify:\/\/shop_images\/Return.png",
+            "deliver_text": "28 day returns"
+          }
+        },
+        "text_wAUapP": {
+          "type": "text",
+          "settings": {
+            "deliver_icon": "shopify:\/\/shop_images\/Shipping.png",
+            "deliver_text": "free delivery on orders over €40"
+          }
+        },
+        "text_bn8wHa": {
+          "type": "text",
+          "settings": {
+            "deliver_icon": "shopify:\/\/shop_images\/Marker.png",
+            "deliver_text": "In Business Since 1977"
+          }
+        }
+      },
+      "block_order": [
+        "text_7DrE3A",
+        "text_wAUapP",
+        "text_bn8wHa"
+      ],
+      "settings": {
+        "bg_color": "#004289"
+      }
+    },
+    "image_with_text_blocks_k8K4LE": {
+      "type": "image-with-text-blocks",
+      "blocks": {
+        "block1_QGrYQe": {
+          "type": "block1",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_5.1.png",
+            "bg_color": "#1773b0",
+            "title": "Hiking Essentials",
+            "text": "Nullan quis risus eget urna mollis ornare vel eu leo.",
+            "button_label": "shop hiking",
+            "button_link": ""
+          }
+        },
+        "block1_bqPtzB": {
+          "type": "block1",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_5.2.png",
+            "bg_color": "#004289",
+            "title": "Accessories",
+            "text": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis.",
+            "button_label": "shop accessories",
+            "button_link": ""
+          }
+        },
+        "block2_DE3gKt": {
+          "type": "block2",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/train-1.jpg",
+            "title": "outdoor essentials",
+            "text": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis.",
+            "button_label": "shop outdoor essentials",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block1_QGrYQe",
+        "block1_bqPtzB",
+        "block2_DE3gKt"
+      ],
+      "settings": {
       }
     },
     "featured_collection": {
@@ -66,10 +160,73 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "sign_up_nb7KLz": {
+      "type": "sign-up",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/train-map.jpg",
+        "header": "join our Newsletter",
+        "sub_header": "Be the first to know about our offers, events &  new arrivals",
+        "button_label": "Sign Up",
+        "button_link": ""
+      }
+    },
+    "something_link_multi_text_czwXqa": {
+      "type": "something-link-multi-text",
+      "blocks": {
+        "block_gxKQDE": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group.png",
+            "block_header": "WE love outdoors",
+            "block_content": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+          }
+        },
+        "block_ipRpaD": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Vector.png",
+            "block_header": "Sustainable",
+            "block_content": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum."
+          }
+        },
+        "block_i9LTwh": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/saint-patricks-day_1.png",
+            "block_header": "based in IRELAND",
+            "block_content": "Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur."
+          }
+        },
+        "block_zp6B87": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group1.png",
+            "block_header": "something",
+            "block_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          }
+        }
+      },
+      "block_order": [
+        "block_gxKQDE",
+        "block_ipRpaD",
+        "block_i9LTwh",
+        "block_zp6B87"
+      ],
+      "settings": {
+        "sub_header": "Quisque velit nisi-",
+        "header": "\"Pellentesque in ipsum id orci porta dapibus.\"",
+        "button_label": "learn more",
+        "button_link": ""
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "text_deliver_mYtdJG",
+    "image_with_text_blocks_k8K4LE",
+    "featured_collection",
+    "sign_up_nb7KLz",
+    "something_link_multi_text_czwXqa"
   ]
 }

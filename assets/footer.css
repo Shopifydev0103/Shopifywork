@@ -1,0 +1,142 @@
+.footer-main-container {
+    display: flex;
+    width: 85%;
+    margin-left: auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-main-container .logo {
+    max-width: 154px;
+    height: 123px;
+}
+
+.footer-main-container .info {
+    max-width: 200px;
+}
+
+.footer-main-container .info .title {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.footer-main-container .info ul {
+    list-style-type: none;
+    padding-left: 0;
+
+}
+
+.footer-main-container .info ul li a {
+    text-decoration: none;
+    line-height: 15.6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+.footer-main-container .contact .title {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.2px;
+}
+
+.footer-main-container .contact {
+    width: 230px;
+}
+
+.footer-main-container .contact .social-icons {
+    display: flex;
+}
+
+
+.footer-main-container .newsletter {
+    max-width: 357px;
+    background-color: #004298;
+}
+
+.footer-main-container .newsletter .container {
+    padding: 40px;
+}
+
+.footer-main-container .newsletter .container span {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.2px;
+    color: white;
+}
+
+.footer-main-container .newsletter .container p,
+label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    color: white;
+}
+
+.lable-with-input .newsletter-input {
+    width: 277px;
+    height: 52px;
+}
+
+.footer-main-container .newsletter .container .btn {
+    background-color: #032C58;
+    max-width: 277px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-main-container .newsletter .container .text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.list-social__item a {
+    padding: 0;
+}
+
+.footer-main-container .logo-info-contact {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .footer-main-container {
+        display: grid;
+        grid: 300px / auto auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .footer-main-container {
+        display: grid;
+        grid: 300px / auto;
+        width: 95%;
+        margin-left: 0;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .footer-main-container .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-main-container .info ul {
+        text-align: center;
+    }
+
+    .footer-main-container .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

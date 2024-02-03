@@ -1,65 +1,74 @@
 {{ 'sign-up.css' | asset_url | stylesheet_tag }}
 
-
-<div class="sign-up">
-    <div class="main-wrapper">
-        <img src="{{ section.settings.bg_image | image_url: medium }}" >
-        <div class="container">
-            <div>
-                {%- if section.settings.header -%}
-                    <h1>{{ section.settings.header }}</h1>
-                {%- endif -%}
-                {%- if section.settings.sub_header -%}
-                    <p class="subheader">{{ section.settings.sub_header }}</p>
-                {%- endif -%}
-            </div>
-            <div class="input-with-button">
-                <input class="sign-up-input">
-                {%- if section.settings.button_label -%}
-                    <a class="sign-up-btn" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
-                {%- endif -%}
-            </div>
+<div class="sign-up section-{{ section.id }}">
+  <div class="main-wrapper">
+    {% style %}
+      .section-{{ section.id }} .main-wrapper {
+          background-image: url("{{ section.settings.bg_image | img_url: 'master' }}");
+          height: 314px;
+          background-position: inherit;
+          background-size: cover;
+      }
+    {% endstyle %}
+    <div class="container">
+      <div>
+        {%- if section.settings.header -%}
+          <h1>{{ section.settings.header }}</h1>
+        {%- endif -%}
+        {%- if section.settings.sub_header -%}
+          <p class="subheader">{{ section.settings.sub_header }}</p>
+        {%- endif -%}
+      </div>
+      <div class="input-with-button">
+        <div class="label-input"> 
+          <label class="label">Email Address</label>
+          <input class="sign-up-input">
         </div>
+        {%- if section.settings.button_label -%}
+          <a class="sign-up-btn" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        {%- endif -%}
+      </div>
     </div>
+  </div>
 </div>
 
 {% schema %}
+{
+  "name": "sign-up",
+  "class": "section",
+  "settings": [
     {
-        "name": "sign-up",
-        "class": "section",
-        "settings": [
-            {
-                "type": "image_picker",
-                "id": "bg_image",
-                "label": "Background Image"
-            },
-            {
-                "type": "text",
-                "id": "header",
-                "label": "Header",
-                "default": "join our Newsletter"
-            },
-            {
-                "type": "text",
-                "id": "sub_header",
-                "label": "subHeader"
-            },
-            {
-                "type": "text",
-                "id": "button_label",
-                "default": "Button label",
-                "label": "Button label"               
-            },
-            {
-                "type": "url",
-                "id": "button_link",
-                "label": "Button link"
-            }
-        ],
-        "presets": [
-            {
-              "name": "Sign up"
-            }
-          ]
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header",
+      "default": "join our Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "sub_header",
+      "label": "subHeader"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     }
+  ],
+  "presets": [
+    {
+      "name": "Sign up"
+    }
+  ]
+}
 {% endschema %}
