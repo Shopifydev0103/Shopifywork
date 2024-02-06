@@ -141,13 +141,13 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "frontpage",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -219,6 +219,40 @@
         "button_label": "learn more",
         "button_link": ""
       }
+    },
+    "text_deliver_Hm8Cfm": {
+      "type": "text-deliver",
+      "blocks": {
+        "text_PdLUm3": {
+          "type": "text",
+          "settings": {
+            "deliver_icon": "shopify:\/\/shop_images\/Return.png",
+            "deliver_text": "28 day returns"
+          }
+        },
+        "text_KgwGtf": {
+          "type": "text",
+          "settings": {
+            "deliver_icon": "shopify:\/\/shop_images\/Shipping.png",
+            "deliver_text": "free delivery on orders over €40"
+          }
+        },
+        "text_cCUfPG": {
+          "type": "text",
+          "settings": {
+            "deliver_icon": "shopify:\/\/shop_images\/Marker.png",
+            "deliver_text": "Irish Family Business Since 1984"
+          }
+        }
+      },
+      "block_order": [
+        "text_PdLUm3",
+        "text_KgwGtf",
+        "text_cCUfPG"
+      ],
+      "settings": {
+        "bg_color": "#004289"
+      }
     }
   },
   "order": [
@@ -227,6 +261,7 @@
     "image_with_text_blocks_k8K4LE",
     "featured_collection",
     "sign_up_nb7KLz",
-    "something_link_multi_text_czwXqa"
+    "something_link_multi_text_czwXqa",
+    "text_deliver_Hm8Cfm"
   ]
 }

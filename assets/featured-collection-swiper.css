@@ -1,0 +1,13 @@
+.button-position {
+    top: 40%;
+}
+.button-position-right {
+    top: 40%;
+    right: 48px;
+}
+.pagination-position {
+    left: 48%;
+    left: 48%;
+    display: flex;
+    gap: 20px;
+}

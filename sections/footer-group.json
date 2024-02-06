@@ -4,19 +4,43 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_hXBw4n": {
+          "type": "link_list",
+          "settings": {
+            "heading": "info",
+            "menu": "footer"
+          }
+        },
+        "text_8rzr8y": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact",
+            "subtext": "<p>Tel          <strong> <\/strong><a href=\"#\" title=\"#\"><strong>012 3456789<\/strong><\/a><\/p><p>E-mail   <a href=\"#\" title=\"#\"><strong> hello@domain.com<\/strong><\/a><\/p><p>Lorem Ipsum Outdoor Unit 1, Lipsum,<\/p><p>City, Co. County<\/p><p>Follow Us<\/p>",
+            "show_social": true
+          }
+        },
+        "text_with_input_button_tqUhXH": {
+          "type": "text-with-input-button",
+          "settings": {
+            "header": "join our Newsletter",
+            "content": "<p>Be the first to know about Our offers, events, new arrivals & sales.<\/p>",
+            "bg_color": "#1773b0",
+            "button_label": "Sign Up",
+            "Button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_list_hXBw4n",
+        "text_8rzr8y",
+        "text_with_input_button_tqUhXH"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "logo": "shopify:\/\/shop_images\/805-04_1.png",
+        "copyright": "Copyright © StudioForty9  |   Cookies   |  Terms & Conditions",
+        "company_mark": "shopify:\/\/shop_images\/builtbysf9_1.png",
+        "contact_title": ""
       }
     }
   },

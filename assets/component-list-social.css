@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 749px) {
@@ -29,4 +30,11 @@
 
 .list-social__link:hover .icon {
   transform: scale(1.07);
+}
+
+@media (max-width: 1024px) {
+  .list-social {
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
 }

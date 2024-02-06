@@ -35,6 +35,10 @@
     align-items: center;
     padding: 10px 30px;
 }
+.something-link .main-wrapper .blocks .container .img-title-text {
+    width: 60px;
+    height: 60px;
+}
 .something-link .main-wrapper .blocks .container h2 {
     font-size: 30px;
     font-weight: 700;

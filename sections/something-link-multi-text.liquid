@@ -7,7 +7,7 @@
         <div class="blocks">
             {%- for block in section.blocks -%}
                 <div class="container">
-                    <div>
+                    <div class="img-title-text">
                         <img src="{{ block.settings.icon | img_url: medium }}">
                     </div>
                     {%- if block.settings.block_header -%}

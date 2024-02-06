@@ -8,46 +8,44 @@
 %}
 <div class="footer">
   <div class="footer-main-container">
-    
-        <div class="logo">
-          <img src="{{ section.settings.logo | img_url: "master"}}">
-        </div>
-        <div class="info">
-          {% for block in section.blocks %}
-            {%- if block.type == 'link_list' -%}
-              {%- if block.settings.heading -%}
-                <h2 class="title">{{ block.settings.heading }}</h2>
-              {%- endif -%}
-              {%- if block.settings.menu != blank -%}
-                <ul>
-                  {%- for link in block.settings.menu.links -%}
-                    <li>
-                      <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
+    <div class="logo">
+      <img src="{{ section.settings.logo | img_url: "master"}}">
+    </div>
+    <div class="info">
+      {% for block in section.blocks %}
+        {%- if block.type == 'link_list' -%}
+          {%- if block.settings.heading -%}
+            <h2 class="title">{{ block.settings.heading }}</h2>
+          {%- endif -%}
+          {%- if block.settings.menu != blank -%}
+            <ul>
+              {%- for link in block.settings.menu.links -%}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        {%- endif -%}
+      {% endfor %}
+    </div>
+    <div class="contact">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'text' -%}
+          {%- if block.settings.heading -%}
+            <h2 class="title">{{ block.settings.heading }}</h2>
+          {%- endif -%}
+          {%- if block.settings.subtext -%}
+            <p>{{ block.settings.subtext }}</p>
+          {%- endif -%}
+          <div class="social-icons">
+            {%- if block.settings.show_social and has_social_icons -%}
+              {%- render 'social-icons', class: 'footer__list-social' -%}
             {%- endif -%}
-          {% endfor %}
-        </div>
-        <div class="contact">
-          {%- for block in section.blocks -%}
-            {%- if block.type == 'text' -%}
-              {%- if block.settings.heading -%}
-                <h2 class="title">{{ block.settings.heading }}</h2>
-              {%- endif -%}
-              {%- if block.settings.subtext -%}
-                <p>{{ block.settings.subtext }}</p>
-              {%- endif -%}
-              <div class="social-icons">
-                {%- if block.settings.show_social and has_social_icons -%}
-                  {%- render 'social-icons', class: 'footer__list-social' -%}
-                {%- endif -%}
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-    
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
     <div class="newsletter">
       <div class="container">
         {%- for block in section.blocks -%}
@@ -63,13 +61,25 @@
               <input class="newsletter-input">
             </div>
             {% if block.settings.button_label %}
-                <div class="btn">
-                    <a class="text" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
-                </div>
+              <div class="btn">
+                <a class="text" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+              </div>
             {% endif %}
           {% endif %}
         {%- endfor -%}
       </div>
+    </div>
+  </div>
+  <div class="border-bottom__footer"></div>
+  <div class="footer__content-bottom-wrapper">
+    <div class="container">
+      {%- if section.settings.copyright -%}
+        <small class="copyright">{{ section.settings.copyright }}</small>
+      {%- endif -%}
+      {%- if section.settings.company_mark -%}
+        <img  class="company-mark"src="{{ section.settings.company_mark | img_url: "master" }}" alt="company mark">
+      {%- endif -%}
+      
     </div>
   </div>
 </div>
@@ -82,6 +92,19 @@
       "id": "logo",
       "label": "Logo"
     },
+    {
+        "type": "text",
+        "id": "copyright",
+        "label": "Copyright"
+        
+    },
+    {
+        "type": "image_picker",
+        "id": "company_mark",
+        "label": "Company mark"
+    },
+
+    
     {
       "type": "text",
       "id": "contact_title",
