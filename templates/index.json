@@ -133,34 +133,6 @@
       "settings": {
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "frontpage",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "sign_up_nb7KLz": {
       "type": "sign-up",
       "settings": {
@@ -169,6 +141,34 @@
         "sub_header": "Be the first to know about our offers, events &  new arrivals",
         "button_label": "Sign Up",
         "button_link": ""
+      }
+    },
+    "featured_collection_swiper_iaYrJy": {
+      "type": "featured-collection-swiper",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "something_link_multi_text_czwXqa": {
@@ -259,8 +259,8 @@
     "image_banner",
     "text_deliver_mYtdJG",
     "image_with_text_blocks_k8K4LE",
-    "featured_collection",
     "sign_up_nb7KLz",
+    "featured_collection_swiper_iaYrJy",
     "something_link_multi_text_czwXqa",
     "text_deliver_Hm8Cfm"
   ]
