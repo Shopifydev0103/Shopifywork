@@ -2944,7 +2944,9 @@ details[open] > .header__menu-item .icon-caret {
 .header__menu-item .icon-caret {
   right: 0.8rem;
 }
-
+.banner-container {
+  padding: 0 20px;
+}
 .header__submenu .icon-caret {
   flex-shrink: 0;
   margin-left: 1rem;

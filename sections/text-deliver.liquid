@@ -17,6 +17,10 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 32px 120px;
+        
+    }
+    .margin-checkbox {
+        margin: 20px 20px 0 20px;
     }
     @media screen and (max-width: 1030px) {
         .deliver__setting {
@@ -48,7 +52,7 @@
     
 </style>
 
-<div class="deliver__setting deliver-section" >
+<div class="{% if section.settings.margin_checkbox %}margin-checkbox{% endif %} deliver__setting deliver-section" >
      {% for item in section.blocks %}
         <div class="deliver--state-position">
             <img src="{{ item.settings.deliver_icon | img_url: medium }}" alt="Icon">
@@ -66,6 +70,13 @@
                 "id": "bg_color",
                 "label": "Background-color",
                 "default": "#004289"
+            },
+            {
+                "type": "checkbox",
+                "id": "margin_checkbox",
+                "label": "add Margin checkbox",
+                "default": false
+                
             }
         ],
         "blocks": [
