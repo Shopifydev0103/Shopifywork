@@ -2985,6 +2985,23 @@ details-disclosure > details {
     overflow: auto;
   }
 }
+@media (max-width: 500px) {
+  .placeholder-custom {
+    display: none;
+  }
+  .favories-cart {
+    gap: 20px;
+  }
+  .header-container {
+    gap: 20px;
+  }
+  .header__heading, .header__heading-link {
+    display: none;
+  }
+  .header-container .header__heading {
+    display: none;
+  }
+}
 
 .badge {
   border: 1px solid transparent;
