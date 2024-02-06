@@ -52,12 +52,23 @@
 }
 .right-block {
     width: 50%;
+    padding-top: 20px;
+
 }
 .right-block .image-with-banner {
     width: 100%;
     height: 100%;
     position: relative;
-    padding-top: 20px;
+}
+.image-with-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: #000;
+    opacity: 0.4;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 .background-image {
     width: 100%;
@@ -76,6 +87,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2
 }
 .right-block .image-with-banner .container .title {
     font-size: 60px;
