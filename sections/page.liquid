@@ -98,8 +98,56 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "headlink_image",
+      "label": "Headlink image"
     }
   ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "link",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Link list"
+        }
+      ]
+    },
+    {
+      "type": "img",
+      "name": "img",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "content_img",
+          "label": "content image"
+        }
+        
+      ]
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content_text",
+          "label": "text"
+        }
+        
+      ]
+    }
+  ],
+  
   "presets": [
     {
       "name": "t:sections.page.presets.name"

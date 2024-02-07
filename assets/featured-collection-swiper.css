@@ -9,7 +9,9 @@
 }
 .pagination-position {
     left: 48%;
-    left: 48%;
     display: flex;
     gap: 20px;
+}
+.pagination-position span {
+    background: gray;
 }
