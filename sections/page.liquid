@@ -14,23 +14,71 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-    <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      {%- if section.settings.page.title != blank -%}
-        {{ section.settings.page.title | escape }}
-      {%- else -%}
-        {{ 'sections.page.title' | t }}
+{% comment %}
+  <div class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width page-width--narrow section-{{ section.id }}-padding">
+      <h2 class="page-title {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {%- if section.settings.page.title != blank -%}
+          {{ section.settings.page.title | escape }}
+        {%- else -%}
+          {{ 'sections.page.title' | t }}
+        {%- endif -%}
+      </h2>
+      <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {%- if section.settings.page.content != blank -%}
+          {{ section.settings.page.content }}
+        {%- else -%}
+          <div class="page-placeholder-wrapper placeholder">
+            {{ 'page' | placeholder_svg_tag: 'page-placeholder' }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{% endcomment %}
+
+<div class="headlink-page">
+  <div class="container">
+    <div class="main-content">
+      {%- if section.settings.heading -%}
+        <h1 class="heading">{{ section.settings.heading }}</h1>
       {%- endif -%}
-    </h2>
-    <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      {%- if section.settings.page.content != blank -%}
-        {{ section.settings.page.content }}
-      {%- else -%}
-        <div class="page-placeholder-wrapper placeholder">
-          {{ 'page' | placeholder_svg_tag: 'page-placeholder' }}
-        </div>
+      {%- if section.settings.subheading -%}
+        <h3 class="subheading">{{ section.settings.subheading }}</h3>
       {%- endif -%}
+      {%- if section.settings.sub_content -%}
+        <p class="subcontent">{{ section.settings.sub_content }}</p>
+      {%- endif -%}
+      {%- if section.settings.headlink -%}
+        <h2 class="headlink">{{ section.settings.headlink }}</h2>
+      {%- endif -%}
+      {%- if section.settings.headlink_image -%}
+        <img class="headlink-img" src="{{ section.settings.headlink_image | img_url: "master"}}">
+      {%- endif -%}
+      {%- if section.settings.headlink_content -%}
+        <p class="headlink-content">{{ section.settings.headlink_content }}</p>
+      {%- endif -%}
+    </div>
+    {%- for block in section.blocks -%}
+      {%- if block.type == "img" -%}
+        {%- if block.settings.content_img -%}
+          <img src="{{ block.settings.content_img | img_url: "master" }}">
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    <div class="right-link">
+      <div class="container">
+        {%- for block in section.blocks -%}
+          {%- if block.type == "link_list" -%}
+            {%- if block.settings.heading -%}
+              <h2 class>{{ block.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if block.settings.menu -%}
+              <div>{{ block.settings.menu }}</div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
 </div>
@@ -48,6 +96,31 @@
       "type": "page",
       "id": "page",
       "label": "t:sections.page.settings.page.label"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "subHeading"
+    },
+    {
+      "type": "richtext",
+      "id": "sub_content",
+      "label": "subcontent"
+    },
+    {
+      "type": "richtext",
+      "id": "headlink",
+      "label": "headlink"
+    },
+    {
+      "type": "richtext",
+      "id": "headlink_content",
+      "label": "headlink_content"
     },
     {
       "type": "select",
@@ -131,23 +204,10 @@
           "id": "content_img",
           "label": "content image"
         }
-        
-      ]
-    },
-    {
-      "type": "text",
-      "name": "text",
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "content_text",
-          "label": "text"
-        }
-        
       ]
     }
   ],
-  
+
   "presets": [
     {
       "name": "t:sections.page.presets.name"
