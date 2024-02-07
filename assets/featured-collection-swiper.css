@@ -1,9 +1,11 @@
 .button-position {
     top: 40%;
+    background: none;
 }
 .button-position-right {
     top: 40%;
     right: 48px;
+    background: none;
 }
 .pagination-position {
     left: 48%;

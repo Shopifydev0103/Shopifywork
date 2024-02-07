@@ -12,7 +12,7 @@
                 <div class="text-wrapper" style= "background-color: {{block.settings.bg_color }}">
                     <div class="container">
                         {%- if block.settings.title -%}
-                            <h2 class="title">{{ block.settings.title}}</h2>
+                            <p class="title">{{ block.settings.title}}</p>
                         {%- endif -%}
                         {% if block.settings.text %}
                             <p class="text">{{ block.settings.text }}</p>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="container">
                     {% if block.settings.title %}
-                        <h1 class="title">{{ block.settings.title }}</h1>
+                        <p class="title">{{ block.settings.title }}</p>
                     {% endif %}
                     {%- if block.settings.text -%}
                         <p class="text">{{ block.settings.text }}</p>

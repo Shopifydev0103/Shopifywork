@@ -440,7 +440,7 @@
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .banner__heading  {
     font-size: 60px;
   }
