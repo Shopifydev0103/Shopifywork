@@ -201,3 +201,13 @@
         padding: 10px 20px;
     }
 }
+@media (max-width: 425px) {
+    .right-block .image-with-banner .container .title {
+        font-size: 18px;
+
+
+    }
+    .right-block .image-with-banner .container {
+        width: 57%;
+    }
+}

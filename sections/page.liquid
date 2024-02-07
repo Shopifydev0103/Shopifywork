@@ -1,4 +1,5 @@
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'page-headlink.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -40,41 +41,53 @@
 <div class="headlink-page">
   <div class="container">
     <div class="main-content">
-      {%- if section.settings.heading -%}
-        <h1 class="heading">{{ section.settings.heading }}</h1>
-      {%- endif -%}
-      {%- if section.settings.subheading -%}
-        <h3 class="subheading">{{ section.settings.subheading }}</h3>
-      {%- endif -%}
-      {%- if section.settings.sub_content -%}
-        <p class="subcontent">{{ section.settings.sub_content }}</p>
-      {%- endif -%}
-      {%- if section.settings.headlink -%}
-        <h2 class="headlink">{{ section.settings.headlink }}</h2>
-      {%- endif -%}
-      {%- if section.settings.headlink_image -%}
-        <img class="headlink-img" src="{{ section.settings.headlink_image | img_url: "master"}}">
-      {%- endif -%}
-      {%- if section.settings.headlink_content -%}
-        <p class="headlink-content">{{ section.settings.headlink_content }}</p>
-      {%- endif -%}
-    </div>
-    {%- for block in section.blocks -%}
-      {%- if block.type == "img" -%}
-        {%- if block.settings.content_img -%}
-          <img src="{{ block.settings.content_img | img_url: "master" }}">
+      <div class="main-container">
+        {%- if section.settings.heading -%}
+          <h1 class="heading">{{ section.settings.heading }}</h1>
         {%- endif -%}
-      {%- endif -%}
-    {%- endfor -%}
+        {%- if section.settings.subheading -%}
+          <h3 class="subheading">{{ section.settings.subheading }}</h3>
+        {%- endif -%}
+        {%- if section.settings.sub_content -%}
+          <p class="subcontent">{{ section.settings.sub_content }}</p>
+        {%- endif -%}
+        {%- if section.settings.headlink -%}
+          <h2 class="headlink">{{ section.settings.headlink }}</h2>
+        {%- endif -%}
+        {%- if section.settings.headlink_image -%}
+          <img class="headlink-img" src="{{ section.settings.headlink_image | img_url: "master"}}">
+        {%- endif -%}
+        {%- if section.settings.headlink_content -%}
+          <p class="subcontent">{{ section.settings.headlink_content }}</p>
+        {%- endif -%}
+        <div class="mixed-img">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'img' -%}
+              {%- if block.settings.content_img -%}
+                <img src="{{ block.settings.content_img | img_url: "master" }}">
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
     <div class="right-link">
-      <div class="container">
+      <div class="right-container">
         {%- for block in section.blocks -%}
-          {%- if block.type == "link_list" -%}
+          {%- if block.type == 'link_list' -%}
             {%- if block.settings.heading -%}
-              <h2 class>{{ block.settings.heading }}</h2>
+              <h2 class="menu-title">{{ block.settings.heading }}</h2>
             {%- endif -%}
             {%- if block.settings.menu -%}
-              <div>{{ block.settings.menu }}</div>
+              <ul>
+                {%- for link in block.settings.menu.links -%}
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {%- endfor -%}
+              
+              </ul>
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}

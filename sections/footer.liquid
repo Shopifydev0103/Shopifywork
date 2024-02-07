@@ -6,7 +6,7 @@
     assign has_social_icons = false
   endif
 %}
-<div class="footer">
+<div class="footer page-width">
   <div class="footer-main-container">
     <div class="logo">
       <img src="{{ section.settings.logo | img_url: "master"}}">
@@ -18,7 +18,7 @@
             <h2 class="title">{{ block.settings.heading }}</h2>
           {%- endif -%}
           {%- if block.settings.menu != blank -%}
-            <ul>
+            <ul class="sidebar-menu">
               {%- for link in block.settings.menu.links -%}
                 <li>
                   <a href="{{ link.url }}">{{ link.title }}</a>

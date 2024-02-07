@@ -1,7 +1,7 @@
 {{ 'section-image-with-text-blocks.css' | asset_url | stylesheet_tag }}
 
 
-<div class="image-with-text-blocks">
+<div class="image-with-text-blocks page-width">
   <div class="left-block">
     {%- for block in section.blocks -%}
         {%- if block.type == 'block1' -%}

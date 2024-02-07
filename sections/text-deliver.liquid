@@ -5,103 +5,113 @@
     .deliver--state-position {
         display: flex;
         align-items: center;
-        font-size: 24px;
-        font-weight: 700;
-        color: white;
+        
     }
     .deliver--state-position span {
-        padding-left: 15px;    
+        padding-left: 15px;
+        text-transform: capitalize;
+        font-family: IBM Plex Sans;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 31px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: white;
+
     }
     .deliver__setting {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 32px 120px;
-        
+
     }
     .margin-checkbox {
         margin: 20px 20px 0 20px;
     }
-    @media screen and (max-width: 1030px) {
+   
+    @media (max-width: 768px) {
         .deliver__setting {
-        padding: 20px 70px;
-        }
-        .deliver--state-position span {
-        padding-left: 12px
-        }
-        .deliver--state-position {
-        font-size: 15px;
-        font-weight: 500;
-        }
+            padding: 20px;
+            }
+            .deliver--state-position span {
+            padding-left: 9px;
+            font-size: 15px;
+            }
+            .deliver--state-position {
+                flex-direction: column;
+            }
     }
     @media screen and (max-width: 430px) {
         .deliver--state-position img {
             width: 10px;
         }
         .deliver__setting {
-        padding: 15px 40px;
+        padding: 10px 5px 5px 5px;
         }
         .deliver--state-position span {
-        padding-left: 9px
+        padding-left: 9px;
+        font-size: 8px;
         }
         .deliver--state-position {
-        font-size: 7px;
-        font-weight: 500;
+            flex-direction: column;
         }
-    }
-    
-</style>
-
-<div class="{% if section.settings.margin_checkbox %}margin-checkbox{% endif %} deliver__setting deliver-section" >
-     {% for item in section.blocks %}
-        <div class="deliver--state-position">
-            <img src="{{ item.settings.deliver_icon | img_url: medium }}" alt="Icon">
-            <span>{{ item.settings.deliver_text }}</span>
-        </div>
-    {% endfor %}
-</div>
-{% schema %}
-    {
-        "name": "deliver text",
-        "class": "deliver-text",
-        "settings": [
-            {
-                "type": "color",
-                "id": "bg_color",
-                "label": "Background-color",
-                "default": "#004289"
-            },
-            {
-                "type": "checkbox",
-                "id": "margin_checkbox",
-                "label": "add Margin checkbox",
-                "default": false
-                
-            }
-        ],
-        "blocks": [
-            {
-                "type": "text",
-                "name": "image-text",
-                "settings": [
-                    {
-                        "type": "image_picker",
-                        "id": "deliver_icon",
-                        "label": "Icon"
-                    },
-                    {
-                        "type": "text",
-                        "id": "deliver_text",
-                        "label": "Text"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "deliver info"
-            }
-        ]
         
     }
+   
+   
+</style>
+<div class="page-width">
+  <div class="{% if section.settings.margin_checkbox %}margin-checkbox{% endif %} deliver__setting deliver-section">
+    {% for item in section.blocks %}
+      <div class="deliver--state-position">
+        <img src="{{ item.settings.deliver_icon | img_url: medium }}" alt="Icon">
+        <span>{{ item.settings.deliver_text }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "deliver text",
+  "class": "deliver-text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background-color",
+      "default": "#004289"
+    },
+    {
+      "type": "checkbox",
+      "id": "margin_checkbox",
+      "label": "add Margin checkbox",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "image-text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "deliver_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "deliver_text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "deliver info"
+    }
+  ]
+}
 {% endschema %}
