@@ -2217,6 +2217,8 @@ product-info .loading__spinner:not(.hidden)~*,
   flex-wrap: wrap;
   align-content: center;
   grid-area: announcements;
+  gap: 10px;
+  align-items: center;
 }
 
 .announcement-bar .slider--everywhere {

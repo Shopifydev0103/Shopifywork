@@ -17,7 +17,27 @@
 {% if social_icons %}
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
+<style>
 
+  .clock {
+    display: flex;
+    align-items: center;
+}
+   .underline {
+    text-decoration: underline;
+  } 
+  .font-custom {
+    font-family: IBM Plex Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #FFFFFF;
+
+
+  }
+</style>
 <div
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
   {{ block.shopify_attributes }}
@@ -33,6 +53,11 @@
         aria-label="{{ 'sections.header.announcement' | t }}"
         {{ block.shopify_attributes }}
       >
+        {%- if section.blocks.first.settings.clock != blank -%}
+          <div class="clock">
+            <img src="{{ section.blocks.first.settings.clock | img_url: "master" }}">
+          </div>
+        {%- endif -%}
         {%- if section.blocks.first.settings.text != blank -%}
           {%- if section.blocks.first.settings.link != blank -%}
             <a
@@ -40,12 +65,14 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-          <p class="announcement-bar__message h5">
+          <p class="announcement-bar__message h5 font-custom">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {% render 'icon-arrow' %}
             {%- endif -%}
           </p>
+          <p class="learnmore underline font-custom"><span>{{ section.blocks.first.settings.learn_more }}</span></p>
+
           {%- if section.blocks.first.settings.link != blank -%}
             </a>
           {%- endif -%}
@@ -92,6 +119,7 @@
                   aria-label="{{ 'sections.header.announcement' | t }}"
                   {{ block.shopify_attributes }}
                 >
+                  
                   {%- if block.settings.text != blank -%}
                     {%- if block.settings.link != blank -%}
                       <a
@@ -99,12 +127,16 @@
                         class="announcement-bar__link link link--text focus-inset animate-arrow"
                       >
                     {%- endif -%}
+                    
                     <p class="announcement-bar__message h5">
+                      
                       <span>{{ block.settings.text | escape }}</span>
+                      <p>{{ block.settings.learn_more }}</p>
                       {%- if block.settings.link != blank -%}
                         {% render 'icon-arrow' %}
                       {%- endif -%}
                     </p>
+                    <p>{{ block.settings.learn_more }}</p>
                     {%- if block.settings.link != blank -%}
                       </a>
                     {%- endif -%}
@@ -112,6 +144,8 @@
                 </div>
               </div>
             {%- endfor -%}
+
+
           </div>
           <button
             type="button"
@@ -301,14 +335,26 @@
         {
           "type": "text",
           "id": "text",
-          "default": "Welcome to our store",
+          "default": "Order Now for Next Day Delivery",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "learn_more",
+          "label": "Learn more",
+          "default": "Learn More"
         },
         {
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "clock",
+          "label": "clock"
         }
+
       ]
     }
   ],
