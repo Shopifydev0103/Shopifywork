@@ -8,8 +8,10 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "text": "Order Now for Next Day Delivery",
+            "learn_more": "Learn More",
+            "link": "",
+            "clock": "shopify:\/\/shop_images\/Clock.png"
           }
         }
       },
@@ -17,7 +19,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-1925618a-726e-436c-a359-41be78228bdb",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
