@@ -2244,10 +2244,10 @@ product-info .loading__spinner:not(.hidden)~*,
   min-width: 44px;
 }
 .custom-collection-product-padding {
-  padding: 45px;
+  padding: 45px 45px 45px 0;
 }
 .custom-width-50 {
-  width: 51% !important;
+  width: 53% !important;
 }
 
 .announcement-bar .slider-button--prev {
@@ -3652,8 +3652,12 @@ details-disclosure>details {
     /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-
-
+@media (max-width: 768px) {
+  .list-menu--inline-custom li a span {
+    font-size: 13px;
+  }
+}
+ 
 @media (max-width: 2560px) {
   .list-menu--inline-custom li a span {
 

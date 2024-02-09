@@ -55,7 +55,7 @@
 }
 
 a.pagination__item:hover::after {
-  height: 0.1rem;
+  /* height: 0.1rem; */
 }
 
 .pagination__item .icon-caret {
