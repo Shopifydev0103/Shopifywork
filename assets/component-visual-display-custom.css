@@ -115,7 +115,7 @@
 
 }
 .custom-dis-block {
-    display: block;
+    display: block !important;
 }
 .custom-dis-none {
     display: none;

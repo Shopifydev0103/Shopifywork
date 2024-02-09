@@ -325,7 +325,7 @@
 
 }
 .custom-fliter-color-detail {
-  font-family: Circular TT;
+    font-family: Circular TT;
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
@@ -515,7 +515,7 @@ span.active-facets__button-inner:after {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding-top: 1.5rem;
+  /* padding-top: 1.5rem; */
 }
 
 .active-facets__button-wrapper * {

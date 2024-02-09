@@ -183,7 +183,7 @@
   display: block;
 }
 .custom-padding-20-40 {
-  padding: 20px 40px;
+  padding: 20px 40px 20px 70px;
 }
 
 .card__badge.top {

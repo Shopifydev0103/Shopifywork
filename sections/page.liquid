@@ -49,7 +49,7 @@
           <h3 class="subheading">{{ section.settings.subheading }}</h3>
         {%- endif -%}
         {%- if section.settings.sub_content -%}
-          <p class="subcontent">{{ section.settings.sub_content }}</p>
+          <span class="subcontent">{{ section.settings.sub_content }}</span>
         {%- endif -%}
         {%- if section.settings.headlink -%}
           <h2 class="headlink">{{ section.settings.headlink }}</h2>
@@ -58,7 +58,7 @@
           <img class="headlink-img" src="{{ section.settings.headlink_image | img_url: "master"}}">
         {%- endif -%}
         {%- if section.settings.headlink_content -%}
-          <p class="subcontent">{{ section.settings.headlink_content }}</p>
+          <span class="subcontent">{{ section.settings.headlink_content }}</span>
         {%- endif -%}
         <div class="mixed-img">
           {%- for block in section.blocks -%}
@@ -69,6 +69,7 @@
             {%- endif -%}
           {%- endfor -%}
         </div>
+        <button class="quickly-menu-sidebar" type="button" onclick="meunFunction()">{% render 'sidebar' %}</button>
       </div>
     </div>
 
@@ -95,6 +96,13 @@
     </div>
   </div>
 </div>
+
+<script>
+function meunFunction() {
+  
+  document.querySelector(".right-link").classList.add("display-block");
+}
+</script>
 
 {% schema %}
 {

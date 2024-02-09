@@ -1,13 +1,17 @@
 .headlink-page .container {
     display: flex;
 }
+.display-block {
+    display: block !important;
+}
 
 .headlink-page .container .main-content {
     width: 70%;
 }
 
 .headlink-page .container .main-content .main-container {
-    padding: 60px;
+    padding: 0 60px 60px 60px;
+    position: relative;
 }
 
 .main-content .main-container .heading {
@@ -19,6 +23,9 @@
     text-align: left;
     color: #004289;
     text-transform: uppercase;
+}
+.main-content .main-container .heading p {
+    margin-bottom: 0;
 }
 
 .main-content .main-container .subheading {
@@ -63,7 +70,7 @@
 }
 
 .main-content .main-container .mixed-img img {
-    width: 48%;
+    width: calc(50% - 12px);
 }
 
 
@@ -73,8 +80,7 @@
 }
 
 .right-link .right-container {
-    padding-left: 60px;
-    padding-top: 50px;
+   padding: 40px;
 }
 
 .right-link .right-container .menu-title {
@@ -106,4 +112,52 @@
 }
 .right-link .right-container ul li a:hover {
     color: #004289;
+}
+.quickly-menu-sidebar {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .headlink-page .container {
+        flex-direction: column;
+    }
+    .headlink-page .container .main-content {
+        width: 100%;
+    }
+    .headlink-page .container .right-link {
+        display: none;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        transition: 1s linear(0 0%, 0.13 33.82%);
+    }
+    .main-content .main-container .heading {
+        font-size: 50px;
+    }
+}
+@media (max-width: 425px) {
+    .main-content .main-container .heading {
+        font-size: 24px;
+        text-align: center;
+    }
+    .main-content .main-container .subheading {
+        font-size: 12px;
+    }
+    .main-content .main-container .subcontent {
+        font-size: 11px;
+    }
+    .main-content .main-container .headlink {
+        font-size: 23px;
+        text-align: center;
+    }
+    .headlink-page .container .main-content .main-container {
+        padding: 0 30px 30px;
+    }
 }

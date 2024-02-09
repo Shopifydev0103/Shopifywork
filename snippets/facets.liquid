@@ -103,11 +103,11 @@
                     {%- endif -%}
                   {% endif %}
                 {%- endfor -%}
-                <facet-remove class="custom-dis-none {% if results.filters == empty %}custom-dis-block{% endif %} active-facets__button-wrapper">
+                <facet-remove class=" active-facets__button-wrapper">
                   <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
                     <span class="custom-remover-text">
                       <span class="custom-close">{% render 'icon-close-small' %}</span>
-                      <span >{{ 'products.facets.clear_all' | t }}</span>
+                      <span >Clear All</span>
                     </span>
                   </a>
                 </facet-remove>
@@ -266,7 +266,7 @@
                                   <span class="custom-fliter-color-detail facet-checkbox__text" aria-hidden="true">
                                     {{- value.label | escape }}
                                   </span>
-                                  <span class="custom-fliter-color-detail">{{ value.count }}</span>
+                                  <span class="custom-fliter-color-detail {% if filter.param_name == "filter.v.option.color" %} custom-dis-none {% endif %}">{{ value.count}}</span>
                                 </div>
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
