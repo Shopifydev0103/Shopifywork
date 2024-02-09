@@ -1,0 +1,116 @@
+.custom-display-none {
+    display: none;
+}
+
+.custom-filter-color {
+    font-family: IBM Plex Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #004289;
+}
+
+.custom-filter-color-input-bg-1 {
+    background: #004289;
+    text-decoration: none;
+}
+
+.custom-filter-color-input-bg-2 {
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        border: 1px solid gray;
+}
+
+.custom-filter-color-input-bg-3 {
+    background: #1BA1CB;
+}
+
+.custom-filter-color-input-bg-4 {
+    background: #E36161;
+}
+
+.custom-filter-color-input-bg-5 {
+    background: #004289;
+}
+.custom-filter-color-svg-check-1 {
+    background: #004289;
+    color: white;
+}
+.custom-filter-color-svg-check-3 {
+    background: #1BA1CB;
+    color: white;
+}
+.custom-filter-color-svg-check-4 {
+    background: #E36161;
+    color: white;
+}
+.custom-filter-color-svg-check-5 {
+    background: #004289;
+    color: white;
+}
+
+
+.custom-filter-size-input-bg-border {
+    background: white;
+    border: 1px solid #004289;
+}
+.custom-filter-size-svg-check {
+    color: white;
+}
+.custom-filter-size-input-bg__checked {
+ background: #004289;
+}
+.custom-text-with-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.custom-padding-7-0 {
+    padding: 7px 0;
+}
+.custom-dis-col {
+    display: flex;
+    flex-direction: column;
+}
+.custom-remover-text {
+    font-family: Circular TT;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #004289;
+    text-decoration: underline;
+    display: flex;
+    gap:8px;
+    align-items: center;
+    justify-content: center;
+}
+.custom-close {
+    margin: 0;
+    transform: scale(1.5);
+    height: 20px;
+}
+.custom-selling-list {
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #004289;
+}
+.custom-sort {
+    font-family: IBM Plex Sans;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #004289;
+    opacity: .3;
+
+}

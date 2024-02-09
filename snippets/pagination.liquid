@@ -18,7 +18,7 @@
     <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
       <ul class="pagination__list list-unstyled" role="list">
         {%- if paginate.previous -%}
-          <li>
+          <li >
             <a
               href="{{ paginate.previous.url }}{{ anchor }}"
               class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce"
@@ -30,11 +30,11 @@
         {%- endif -%}
 
         {%- for part in paginate.parts -%}
-          <li>
+          <li class="custom-pagination-bg">
             {%- if part.is_link -%}
               <a
                 href="{{ part.url }}{{ anchor }}"
-                class="pagination__item link"
+                class="pagination__item link custom-current-color"
                 aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
               >
                 {{- part.title -}}

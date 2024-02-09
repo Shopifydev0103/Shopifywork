@@ -2243,6 +2243,12 @@ product-info .loading__spinner:not(.hidden)~*,
   margin-right: -1.5rem;
   min-width: 44px;
 }
+.custom-collection-product-padding {
+  padding: 45px;
+}
+.custom-width-50 {
+  width: 50% !important;
+}
 
 .announcement-bar .slider-button--prev {
   margin-left: -1.5rem;
