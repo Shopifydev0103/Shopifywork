@@ -2247,7 +2247,7 @@ product-info .loading__spinner:not(.hidden)~*,
   padding: 45px;
 }
 .custom-width-50 {
-  width: 50% !important;
+  width: 51% !important;
 }
 
 .announcement-bar .slider-button--prev {
