@@ -9,14 +9,17 @@
           background-position: inherit;
           background-size: cover;
       }
+      .custom-text-color {
+        color: {{ section.settings.signup_color }};
+      }
     {% endstyle %}
     <div class="container">
       <div>
         {%- if section.settings.header -%}
-          <h1>{{ section.settings.header }}</h1>
+          <h1 class="custom-text-color">{{ section.settings.header }}</h1>
         {%- endif -%}
         {%- if section.settings.sub_header -%}
-          <p class="subheader">{{ section.settings.sub_header }}</p>
+          <p class="subheader custom-text-color">{{ section.settings.sub_header }}</p>
         {%- endif -%}
       </div>
       <div class="input-with-button">
@@ -41,6 +44,11 @@
       "type": "image_picker",
       "id": "bg_image",
       "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "signup_color",
+      "label": "Backgroud text"      
     },
     {
       "type": "text",

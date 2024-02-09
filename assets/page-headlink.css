@@ -18,6 +18,7 @@
     letter-spacing: 0px;
     text-align: left;
     color: #004289;
+    text-transform: uppercase;
 }
 
 .main-content .main-container .subheading {
@@ -28,6 +29,8 @@
     letter-spacing: 0px;
     text-align: left;
     color: #004289;
+    text-transform: capitalize;
+
 }
 
 .main-content .main-container .subcontent {
@@ -48,6 +51,10 @@
     letter-spacing: 0px;
     text-align: left;
     color: #004289;
+    text-transform: uppercase;
+}
+.main-content .main-container .headlink-img {
+    width: 100%;
 }
 
 .main-content .main-container .mixed-img {
@@ -56,12 +63,13 @@
 }
 
 .main-content .main-container .mixed-img img {
-    width: 50%;
+    width: 48%;
 }
 
 
 .headlink-page .container .right-link {
     width: 30%;
+    background-color: #F5F6F4;
 }
 
 .right-link .right-container {
@@ -77,11 +85,16 @@
     letter-spacing: 0px;
     text-align: left;
     color: #004289;
+    text-transform: uppercase;
 
 
 }
+.right-link .right-container ul {
+    padding: 0;
+    list-style-type: none;
+}
 
-.right-link .right-container .sidebar-menu li a {
+.right-link .right-container ul li a {
     font-family: IBM Plex Sans;
     font-size: 16px;
     font-weight: 400;
@@ -89,7 +102,8 @@
     letter-spacing: 0px;
     text-align: left;
     color: #333333;
+    text-decoration: none;
 }
-.right-link .right-container .sidebar-menu li a:hover {
+.right-link .right-container ul li a:hover {
     color: #004289;
 }
